@@ -1,20 +1,20 @@
 ﻿csNgin
-1.0.0.0
+
 
 winexe
 C#
 .cs
-c:\Users\shark\Desktop\csNgin\obj\Debug\net6.0-windows\
+C:\Users\shark\Desktop\csNgin\obj\Debug\net6.0-windows\
 csNgin
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-c:\Users\shark\Desktop\csNgin\App.xaml
+C:\Users\shark\Desktop\csNgin\App.xaml
 11407045341
 
-51971508928
+5-297132816
 194-1951243044
 MainWindow.xaml;
 
-True
+False
 
