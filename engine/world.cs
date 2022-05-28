@@ -16,11 +16,13 @@ using System.Diagnostics;
 using System.IO;
 using System.Drawing;
 using System.Collections.ObjectModel;
+using csNgin.util;
 
-namespace csNgin.util
+namespace csNgin.engine
 {
     public static class world
     {
+        public static vec2 width_height = new vec2();
         public static ObservableCollection<objectNode> objects;
         public static ObservableCollection<objectNode> renderBuffer;
         static world()
@@ -41,6 +43,7 @@ namespace csNgin.util
 
             foreach(objectNode obj in sorted.Values)
             {
+                obj.pos = transform.subtract(width_height, obj.pos);
                 toRet.Add(obj);
             }
             return toRet;

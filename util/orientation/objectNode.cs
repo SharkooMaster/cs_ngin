@@ -12,15 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using csNgin.engine;
 
 namespace csNgin.util
 {
     public class objectNode
     {
         public int id       {get;set;}
+        public vec2 pos     {get;set;}
         public object obj   {get;set;}
-        public float x      {get;set;}
-        public float y      {get;set;}
         public float width  {get;set;}
         public float height {get;set;}
         public int layer_i  {get;set;}  // z offset
@@ -32,6 +32,7 @@ namespace csNgin.util
         public objectNode(int _id, int _layer_i, string _name, int _parentId)
         {
             id = _id;
+            pos = new vec2();
             layer_i = _layer_i;
             name = _name;
             parentId = _parentId;

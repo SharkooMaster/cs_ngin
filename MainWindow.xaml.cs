@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using csNgin.util;
+using csNgin.engine;
 
 namespace csNgin
 {
@@ -25,6 +26,8 @@ namespace csNgin
         public MainWindow()
         {
             InitializeComponent();
+            world.width_height.x  = ( (float)window.Width  / 2 );
+            world.width_height.y  = ( (float)window.Height / 2 );
 
             objectNode main = new objectNode(0, 0, "main", 0);
             Button mainBtn = new Button();
@@ -41,6 +44,8 @@ namespace csNgin
 
             foreach(var item in world.renderBuffer)
             {
+                Canvas.SetLeft((Button)item.obj, item.pos.x);
+                Canvas.SetTop((Button)item.obj, item.pos.y);
                 canvas.Children.Add((Button)item.obj);
             }
         }
