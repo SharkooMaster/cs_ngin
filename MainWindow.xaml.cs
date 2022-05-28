@@ -25,6 +25,24 @@ namespace csNgin
         public MainWindow()
         {
             InitializeComponent();
+
+            objectNode main = new objectNode(0, 0, "main", 0);
+            Button mainBtn = new Button();
+            mainBtn.Content = "main";
+            main.obj = mainBtn;
+            objectNode child = new objectNode(1, 1, "child", 0);
+            Button childBtn = new Button();
+            childBtn.Content = "child";
+            child.obj = childBtn;
+
+            world.objects.Add(main);
+            world.objects.Add(child);
+            world.updateRenderBuffer();
+
+            foreach(var item in world.renderBuffer)
+            {
+                canvas.Children.Add((Button)item.obj);
+            }
         }
     }
 }

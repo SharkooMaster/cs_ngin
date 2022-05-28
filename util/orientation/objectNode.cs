@@ -18,7 +18,12 @@ namespace csNgin.util
     public class objectNode
     {
         public int id       {get;set;}
-        public int layer_i  {get;set;}
+        public object obj   {get;set;}
+        public float x      {get;set;}
+        public float y      {get;set;}
+        public float width  {get;set;}
+        public float height {get;set;}
+        public int layer_i  {get;set;}  // z offset
         public string name  {get;set;}
         public int parentId {get;set;}
 
@@ -56,5 +61,7 @@ namespace csNgin.util
             }
             return temp.ToArray();
         }
+
+        // ##### RENDER ##### \\
     }
 }
